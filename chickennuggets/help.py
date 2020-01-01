@@ -1,6 +1,9 @@
 import discord
 from discord.ext import commands
 
+from chickennuggets.footer import set_footer
+
+
 HELP_COLOR = discord.Color.blue()
 
 
@@ -25,6 +28,7 @@ class EmbedHelpCommand(commands.HelpCommand):
         embed = discord.Embed(title='Help',
                               description=error,
                               color=HELP_COLOR)
+        set_footer(embed)
         await self.get_destination().send(embed=embed)
 
     async def send_bot_help(self, mapping):
@@ -65,6 +69,7 @@ class EmbedHelpCommand(commands.HelpCommand):
             embed.add_field(name=title, value=command_str)
 
         # Send
+        set_footer(embed)
         await self.get_destination().send(embed=embed)
 
     async def send_cog_help(self, cog):
@@ -80,6 +85,7 @@ class EmbedHelpCommand(commands.HelpCommand):
                 'that can be used in this context.',
                 color=HELP_COLOR)
 
+            set_footer(embed)
             await self.get_destination().send(embed=embed)
             return
 
@@ -98,6 +104,7 @@ class EmbedHelpCommand(commands.HelpCommand):
             embed.add_field(name=command.name, value=help, inline=False)
 
         # Send
+        set_footer(embed)
         await self.get_destination().send(embed=embed)
 
     async def send_command_help(self, command):
@@ -127,6 +134,7 @@ class EmbedHelpCommand(commands.HelpCommand):
         embed.add_field(name='Description', value=help, inline=False)
 
         # Send
+        set_footer(embed)
         await self.get_destination().send(embed=embed)
 
     async def send_group_help(self, group):
@@ -171,6 +179,7 @@ class EmbedHelpCommand(commands.HelpCommand):
         embed.add_field(name='Description', value=help, inline=False)
 
         # Send
+        set_footer(embed)
         await self.get_destination().send(embed=embed)
 
 
