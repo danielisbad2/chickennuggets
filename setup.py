@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 from os import path
 
 
@@ -33,7 +33,7 @@ setup(
         'Source': 'https://github.com/AlphaMycelium/chicken-nuggets',
     },
 
-    packages=['chickennuggets'],
+    packages=find_packages(),
     python_requires='>=3.6,<4',
     setup_requires=['setuptools_scm'],
     install_requires=['discord.py >=1.2.5,<2']
