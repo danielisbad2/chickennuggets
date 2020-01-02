@@ -13,9 +13,17 @@ pip3 install chickennuggets
 ### Help Command
 
 An embed-based improvement to the default discord.py help command, showing all
-the same information. Load it by including the following line before you launch
-your bot:
+the same information.
 
 ```python3
 bot.load_extension('chickennuggets.help')
+```
+
+### Error Handler
+
+Handles user-input-related command errors as well as forwarding unexpected
+exceptions to the bot author in a DM.
+
+```python3
+bot.load_extension('chickennuggets.errors')
 ```
