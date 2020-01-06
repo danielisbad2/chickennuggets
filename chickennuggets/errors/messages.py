@@ -95,3 +95,16 @@ COMMAND_ERROR_MESSAGES = {
         'description': 'You have given some incorrect input'
     },
 }
+
+
+# Import discord-flags only if available
+try:
+    from discord.ext import flags
+except ImportError:
+    pass
+else:
+    # The flags module is installed!
+    COMMAND_ERROR_MESSAGES[flags._parser.ArgumentParsingError] = {
+        'title': 'Flag Parsing Error',
+        'description': 'There is an error in the flags passed to this command'
+    }
