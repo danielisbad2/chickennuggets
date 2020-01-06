@@ -1,4 +1,5 @@
 import logging
+import traceback
 
 import discord
 
@@ -18,7 +19,11 @@ async def process_unknown_error(ctx, error):
     to the command author with an apology.
     """
 
-    logger.error(error)
+    # Get traceback message
+    trace = ''.join(traceback.format_exception(
+        type(error), error, error.__traceback__))
+    # Add to logs
+    logger.error(trace)
 
     # Apologise to command author
     logger.info('Apologising to command author')
@@ -37,7 +42,7 @@ async def process_unknown_error(ctx, error):
     # Build an embed with exception details
     embed = discord.Embed(
         title='Unhandled Exception',
-        description=f'```{error}```',
+        description=f'```{trace}```',
         color=ERROR_COLOR
     )
     embed.add_field(
