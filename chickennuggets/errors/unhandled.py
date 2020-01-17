@@ -31,8 +31,8 @@ async def process_unknown_error(ctx, error):
     embed = discord.Embed(
         title='Unknown Error',
         description=(
-            f'An error has occured within {ctx.bot.user.name}. I\'m sorry. '
-            'Details of the problem have been relayed to my author.'
+            f'An error has occured in {ctx.bot.user.name}. I\'m sorry. '
+            'Details of the problem have been sent to my creator.'
         ),
         color=ERROR_COLOR
     )
