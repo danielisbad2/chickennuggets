@@ -18,7 +18,7 @@ setup(
     author='Daniel Thwaites',
     author_email='danthwaites30@btinternet.com',
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
