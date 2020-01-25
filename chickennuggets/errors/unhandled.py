@@ -37,7 +37,7 @@ async def process_unknown_error(ctx, error):
         color=ERROR_COLOR
     )
     set_footer(embed)
-    await ctx.author.send(embed=embed)
+    await ctx.send(embed=embed)
 
     # Build an embed with exception details
     embed = discord.Embed(
