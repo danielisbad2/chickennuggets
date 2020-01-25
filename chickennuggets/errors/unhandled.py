@@ -1,5 +1,6 @@
 import logging
 import traceback
+import io
 
 import discord
 
@@ -42,7 +43,7 @@ async def process_unknown_error(ctx, error):
     # Build an embed with exception details
     embed = discord.Embed(
         title='Unhandled Exception',
-        description=f'```{trace}```',
+        description=f'```{error}```\nFull traceback is attached as a file.',
         color=ERROR_COLOR
     )
     embed.add_field(
@@ -51,8 +52,12 @@ async def process_unknown_error(ctx, error):
     )
     set_footer(embed)
 
+    # Pack full trace into a file
+    file_contents = io.BytesIO(trace.encode())
+    file = discord.File(file_contents, filename='traceback.txt')
+
     # Send to bot owner for analysis
     appinfo = await ctx.bot.application_info()
-    await appinfo.owner.send(embed=embed)
+    await appinfo.owner.send(embed=embed, file=file)
 
     logger.info('Sent unhandled error to bot owner')
