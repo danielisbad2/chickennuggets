@@ -12,15 +12,15 @@ WARNING_COLOR = discord.Color.from_rgb(255, 255, 0)
 logger = logging.getLogger(__name__)
 
 
-async def send_error_message(channel, message):
+async def send_error_message(ctx, message):
     """Send the given error message in an embed and return the sent message."""
 
     embed = discord.Embed(
         color=WARNING_COLOR,
         **message # Unpack message as kwargs
     )
-    set_footer(embed)
-    return await channel.send(embed=embed)
+    set_footer(embed, ctx.bot.user)
+    return await ctx.send(embed=embed)
 
 async def on_command_error(ctx, error):
     """
@@ -41,7 +41,7 @@ async def on_command_error(ctx, error):
             # We found a compatible error message
             logger.info('Matched %s', known_error)
             # Send it to the user
-            await send_error_message(ctx.channel, message)
+            await send_error_message(ctx, message)
             return
 
     # It is not
