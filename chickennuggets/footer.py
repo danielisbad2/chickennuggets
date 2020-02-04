@@ -1,9 +1,10 @@
-def set_footer(embed, client_user=None):
+def set_footer(embed: 'discord.Embed', client_user=None):
     """
     Set a "Powered by Chicken Nuggets" footer on the given embed.
 
-    :param embed: Embed to add the footer to
-    :param client_user: ClientUser whose avatar will be added to the footer
+    Args:
+       embed: Embed to add the footer to
+       client_user: ``ClientUser`` whose avatar will be added to the footer
     """
 
     if client_user is None:

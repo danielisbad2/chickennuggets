@@ -11,15 +11,20 @@ COGS = {
 
 
 class FeatureNotFoundException(Exception):
+    """
+    Exception raised when an invalid feature name is given to :func:`load`.
+    """
+
     pass
 
 
-def load(bot, features):
+def load(bot: 'discord.ext.commands.Bot', features: list):
     """
-    Load the listed features into the bot.
+    Load a set of chickennuggets features into your bot.
 
-    :param bot: Bot to load into
-    :param cogs: List of cogs/features to load
+    Args:
+       bot: Bot to load extensions into
+       features: List of cog names to load
     """
 
     for feature in features:
