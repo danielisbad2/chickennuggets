@@ -1,5 +1,7 @@
 # Chicken Nuggets
 
+[![Documentation Status](https://readthedocs.org/projects/chickennuggets/badge/?version=latest)](https://chickennuggets.readthedocs.io/en/latest/?badge=latest)
+
 A utility library for Discord.py.
 
 ## Install
@@ -8,23 +10,13 @@ A utility library for Discord.py.
 pip3 install chickennuggets
 ```
 
+## Documentation
+
+Documentation for the project is available [here](https://chickennuggets.readthedocs.io/en/latest/).
+
 ## Features
 
 | Feature  | Description                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
 | `help`   | An embed-based alternative to the default help command.                                                     |
 | `errors` | Responds to all command errors with a helpful message, and forwards unhandled exceptions to the bot author. |
-
-## Loading Features
-
-Features can be loaded by calling `chickennuggets.load` with your Discord
-bot instance and a list of keys, corresponding to the feature names in the
-table above.
-
-```python3
-import chickennuggets
-from discord.ext import commands
-
-bot = commands.Bot(command_prefix='!')
-chickennuggets.load(bot, ['help', 'errors'])
-```
