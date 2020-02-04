@@ -3,9 +3,13 @@ chickennuggets
 
 A utility library for Discord.py.
 
+Contents
+--------
+
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+
+   features.rst
 
 Install
 -------
