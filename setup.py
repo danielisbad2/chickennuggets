@@ -27,10 +27,10 @@ setup(
     ],
     keywords='Discord utilities',
 
-    url='https://github.com/AlphaMycelium/chicken-nuggets',
+    url='https://github.com/AlphaMycelium/chickennuggets',
     project_urls={
-        'Bug Reports': 'https://github.com/AlphaMycelium/chicken-nuggets/issues',
-        'Source': 'https://github.com/AlphaMycelium/chicken-nuggets',
+        'Bug Reports': 'https://github.com/AlphaMycelium/chickennuggets/issues',
+        'Source': 'https://github.com/AlphaMycelium/chickennuggets',
     },
 
     packages=find_packages(),

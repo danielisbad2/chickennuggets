@@ -21,8 +21,8 @@ Installation can be completed easily using pip::
 Contribute
 ----------
 
-* `Issue Tracker <https://github.com/AlphaMycelium/chicken-nuggets/issues>`_
-* `Source Code <https://github.com/AlphaMycelium/chicken-nuggets>`_
+* `Issue Tracker <https://github.com/AlphaMycelium/chickennuggets/issues>`_
+* `Source Code <https://github.com/AlphaMycelium/chickennuggets>`_
 
 Indices
 -------
