@@ -12,7 +12,7 @@ setup(
     name='chickennuggets',
     use_scm_version=True,
 
-    description='Utility library for Discord.py bots',
+    description='Utility cogs for Discord.py bots',
     long_description=long_description,
     long_description_content_type='text/markdown',
     author='Daniel Thwaites',
