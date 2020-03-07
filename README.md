@@ -12,11 +12,4 @@ pip3 install chickennuggets
 
 ## Documentation
 
-Documentation for the project is available [here](https://chickennuggets.readthedocs.io/en/latest/).
-
-## Features
-
-| Feature  | Description                                                                                                 |
-|----------|-------------------------------------------------------------------------------------------------------------|
-| `help`   | An embed-based alternative to the default help command.                                                     |
-| `errors` | Responds to all command errors with a helpful message, and forwards unhandled exceptions to the bot author. |
+All documentation for the library is available [here](https://chickennuggets.readthedocs.io/en/latest/).

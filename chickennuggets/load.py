@@ -12,7 +12,7 @@ COGS = {
 
 class FeatureNotFoundException(Exception):
     """
-    Exception raised when an invalid feature name is given to :func:`load`.
+    Exception raised when an invalid cog name is given to :func:`load`.
     """
 
     pass
@@ -20,7 +20,7 @@ class FeatureNotFoundException(Exception):
 
 def load(bot: 'discord.ext.commands.Bot', features: list):
     """
-    Load a set of chickennuggets features into your bot.
+    Load a set of chickennuggets cogs into your bot.
 
     Args:
        bot: Bot to load extensions into

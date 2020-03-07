@@ -9,7 +9,7 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   features.rst
+   cogs.rst
 
 Install
 -------
