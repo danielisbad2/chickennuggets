@@ -60,7 +60,7 @@ COMMAND_ERROR_MESSAGES = {
     },
     commands.MissingRequiredArgument: {
         'title': 'Missing Required Argument',
-        'description': 'You need to spcify all the required paramenter for this command to function'
+        'description': 'You need to specify all the required parameters for this command to function'
     },
     commands.TooManyArguments: {
         'title': 'Too Many Arguments',
