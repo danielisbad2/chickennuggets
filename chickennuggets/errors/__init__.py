@@ -4,7 +4,6 @@ import discord
 
 from chickennuggets.errors.messages import COMMAND_ERROR_MESSAGES
 from chickennuggets.errors.unhandled import process_unknown_error
-from chickennuggets.footer import set_footer
 
 
 WARNING_COLOR = discord.Color.from_rgb(255, 255, 0)
@@ -19,7 +18,6 @@ async def send_error_message(ctx, message):
         color=WARNING_COLOR,
         **message # Unpack message as kwargs
     )
-    set_footer(embed, ctx.bot.user)
     return await ctx.send(embed=embed)
 
 async def on_command_error(ctx, error):

@@ -4,8 +4,6 @@ import io
 
 import discord
 
-from chickennuggets.footer import set_footer
-
 
 ERROR_COLOR = discord.Color.from_rgb(255, 0, 0)
 
@@ -37,7 +35,6 @@ async def process_unknown_error(ctx, error):
         ),
         color=ERROR_COLOR
     )
-    set_footer(embed, ctx.bot.user)
     await ctx.send(embed=embed)
 
     # Build an embed with exception details
@@ -50,7 +47,6 @@ async def process_unknown_error(ctx, error):
         name='Command',
         value=ctx.message.content
     )
-    set_footer(embed, ctx.bot.user)
 
     # Pack full trace into a file
     file_contents = io.BytesIO(trace.encode())
