@@ -1,12 +1,11 @@
 import logging
 
-
 logger = logging.getLogger(__name__)
 
 # Map feature names to extension import paths
 COGS = {
-    'errors': 'chickennuggets.errors',
-    'help': 'chickennuggets.help',
+    "errors": "chickennuggets.errors",
+    "help": "chickennuggets.help",
 }
 
 
@@ -18,7 +17,7 @@ class FeatureNotFoundException(Exception):
     pass
 
 
-def load(bot: 'discord.ext.commands.Bot', features: list):
+def load(bot: "discord.ext.commands.Bot", features: list):
     """
     Load a set of chickennuggets cogs into your bot.
 
@@ -38,7 +37,7 @@ def load(bot: 'discord.ext.commands.Bot', features: list):
             )
 
         # Load the cog
-        logger.info('Loading %s (%s)', feature, path)
+        logger.info("Loading %s (%s)", feature, path)
         bot.load_extension(path)
 
-    logger.info('Load completed')
+    logger.info("Load completed")
