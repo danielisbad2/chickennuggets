@@ -109,9 +109,7 @@ class EmbedHelpCommand(commands.HelpCommand):
         embed = discord.Embed(title=title, color=HELP_COLOR)
 
         # Add usage
-        usage = (
-            f"{self.clean_prefix}{command.qualified_name}" f" {command.signature}"
-        )
+        usage = f"{self.clean_prefix}{command.qualified_name}" f" {command.signature}"
         embed.add_field(name="Usage", value=usage, inline=False)
 
         # Add alias list
