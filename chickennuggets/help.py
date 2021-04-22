@@ -55,7 +55,7 @@ class EmbedHelpCommand(commands.HelpCommand):
             # Build list of commands
             command_str = str()
             for command in commands:
-                command_str += f"**{command.name}**\n"
+                command_str += f"{command.name}\n"
 
             # Add a field for each cog
             if cog is None:
@@ -110,15 +110,15 @@ class EmbedHelpCommand(commands.HelpCommand):
 
         # Add usage
         usage = (
-            f"**{self.clean_prefix}{command.qualified_name}" f" {command.signature}**"
+            f"{self.clean_prefix}{command.qualified_name}" f" {command.signature}"
         )
         embed.add_field(name="Usage", value=usage, inline=False)
 
         # Add alias list
         if len(command.aliases) > 0:
-            alias_string = f"**{command.name}**"
+            alias_string = f"{command.name}"
             for alias in command.aliases:
-                alias_string += f"\n**{alias}**"
+                alias_string += f"\n{alias}"
 
             embed.add_field(name="Aliases", value=alias_string, inline=False)
 
@@ -139,14 +139,14 @@ class EmbedHelpCommand(commands.HelpCommand):
         embed = discord.Embed(title=title, color=HELP_COLOR)
 
         # Add usage
-        usage = f"**{self.clean_prefix}{group.qualified_name}" f" {group.signature}**"
+        usage = f"{self.clean_prefix}{group.qualified_name}" f" {group.signature}"
         embed.add_field(name="Usage", value=usage, inline=False)
 
         # Add alias list
         if len(group.aliases) > 0:
-            alias_string = f"**{group.name}**"
+            alias_string = f"{group.name}"
             for alias in group.aliases:
-                alias_string += f"\n**{alias}**"
+                alias_string += f"\n{alias}"
 
             embed.add_field(name="Aliases", value=alias_string, inline=False)
 
@@ -155,7 +155,7 @@ class EmbedHelpCommand(commands.HelpCommand):
         if len(subs) > 0:
             sub_strings = list()
             for sub in subs:
-                sub_strings.append(f"**{sub.name}**")
+                sub_strings.append(f"{sub.name}")
 
             sub_string = "\n".join(sub_strings)
             embed.add_field(name="Subcommands", value=sub_string, inline=False)
