@@ -77,7 +77,7 @@ class EmbedHelpCommand(commands.HelpCommand):
             # No accessible commands for this context
             embed = discord.Embed(
                 title=cog.qualified_name,
-                description="There are no commands in this catergory "
+                description="There are no commands in this category "
                 "that can be used in this context.",
                 color=HELP_COLOR,
             )
