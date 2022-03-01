@@ -23,10 +23,3 @@ Contribute
 
 * `Issue Tracker <https://github.com/danth/chickennuggets/issues>`_
 * `Source Code <https://github.com/danth/chickennuggets>`_
-
-Indices
--------
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
